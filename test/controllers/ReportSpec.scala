@@ -28,11 +28,11 @@ class ReportSpec extends Specification {
       contentType(result) must beSome("application/json")
       contentAsJson(result) mustEqual TestData.expectedWorldsList
     }
-
+/*
   "testing aa failure" in {
     true must equalTo(false)
   }
-
+*/
     "on reports return list of reports" in new WithDbData {
       val result = route(FakeRequest(GET, "/reports")).get
 
